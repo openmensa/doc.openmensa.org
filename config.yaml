@@ -79,7 +79,4 @@ watcher:
 deploy:
   public:
     kind: rsync
-    dst: openmensa.org:/var/www/doc.openmensa.org
-  test:
-    kind: rsync
-    dst: cn@mycrobase.de:/var/www/test.mycrobase.de
+    dst: openmensa@openmensa.org:/var/www/doc.openmensa.org
