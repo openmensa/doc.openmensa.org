@@ -22,7 +22,8 @@ module OpenMensa
 
       # derives the API version of the document currently processed by nanoc
       def api_version
-        item.identifier.split('/')[1].to_s.upcase
+        return nil if item.identifier.split('/')[1] != 'api'
+        item.identifier.split('/')[2].to_s.upcase
       end
 
       def headers(*opts)
@@ -30,7 +31,8 @@ module OpenMensa
       end
 
       def sidebar_identifier(*opts)
-        Resources.const_get(api_version == "" ? "V1" : api_version).sidebar_identifier(*opts)
+        return "sidebar_default" if api_version == nil
+        Resources.const_get(api_version).sidebar_identifier(*opts)
       end
 
       def json(key)

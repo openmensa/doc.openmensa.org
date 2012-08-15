@@ -1,13 +1,17 @@
 ---
-title: OpenMensa API
+title: Doc | OpenMensa
 ---
 
-# The OpenMensa API
+# The OpenMensa Documentation
 
-On this page all OpenMensa APIs are documented even the historic ones.
+On this page are all OpenMensa APIs and Feed versions documented even the historic ones.
 
-For API v1 explore the available resources on the right »
+For API v1 look [here](/api/v1).
 
-## Current Version
+## Current API Version
 
 API v1 is currently stable but is going to be replaced soon by API v2!
+
+## Current Feed Version
+
+Feed v1 is currently stable but is going to be replaced soon by Feed v2!
