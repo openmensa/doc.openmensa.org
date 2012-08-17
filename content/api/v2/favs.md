@@ -60,6 +60,9 @@ Note: No index should occur more than once.
 
 ### Input
 
+canteen_id
+: _Optional_ **integer** - The referenced canteen.
+
 index
 : _Optional_ **integer** - An index by which the favorites are sorted ascendingly.
 
