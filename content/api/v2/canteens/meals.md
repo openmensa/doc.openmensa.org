@@ -18,7 +18,7 @@ start
 : _Optional_ **string** of a timestamp in following format: YYYY-MM-DD. If no start date is given it defaults to today.
 
 range
-: _Optional_ **integer** - Number of days since start date for which to return meals. If no range is given it defaults to 2 days.
+: _Optional_ non-negative **integer** - Number of days since start date for which to return meals. If no range is given it defaults to 2 days.
 
 ### Response
 
