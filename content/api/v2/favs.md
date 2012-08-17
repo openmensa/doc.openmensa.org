@@ -14,7 +14,7 @@ List the current users favs:
 
 	GET /favs
 
-Note: the server tries to keep them sorted ascendingly but a client should not rely on this fact.
+Note: the server tries to keep them sorted ascendingly but a client must not rely on this fact.
 
 ### Response
 
@@ -42,8 +42,6 @@ canteen_id
 index
 : _Required_ **integer** - An index by which the favorites are sorted ascendingly.
 
-Note: No index should occur more than once.
-
 <%= json \
   :canteen_id => 1,
   :index => 6
@@ -65,8 +63,6 @@ canteen_id
 
 index
 : _Optional_ **integer** - An index by which the favorites are sorted ascendingly.
-
-Note: No index should occur more than once.
 
 <%= json \
   :index => 6
