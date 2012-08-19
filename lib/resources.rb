@@ -2,6 +2,8 @@
 # JSON is included in 1.9 directly, for 1.8 do `gem install json`
 require 'json'
 
+require 'rexml/document'
+
 module OpenMensa
   module Resources
     module Helpers
@@ -47,7 +49,19 @@ module OpenMensa
             Resources.const_get(api_version).const_get(key.to_s.upcase)
         end
         hash = yield hash if block_given?
-        %(<pre class="highlight"><code class="CodeRay language-javascript">#{JSON.pretty_generate(hash)}</code></pre>)
+        code = encode_tags(JSON.pretty_generate(hash))
+        %(<pre class="highlight"><code class="CodeRay language-javascript">#{code}</code></pre>)
+      end
+
+      def xml(xml_string)
+        doc = REXML::Document.new(xml_string)
+        doc.write(output="", 4)
+        code = encode_tags(output)
+        %(<pre class="highlight"><code class="CodeRay language-xml">#{code}</code></pre>)
+      end
+
+      def encode_tags(string)
+        string.to_s.gsub(/>/, "&gt;").gsub(/</, "&lt;")
       end
     end
   end
