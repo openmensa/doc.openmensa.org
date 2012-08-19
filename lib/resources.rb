@@ -37,6 +37,10 @@ module OpenMensa
         Resources.const_get(api_version).sidebar_identifier(*opts)
       end
 
+      def file_in(path)
+        File.open(path, 'r') do |f| f.read end
+      end
+
       def json(key)
         hash = case key
           when Hash
@@ -53,10 +57,14 @@ module OpenMensa
         %(<pre class="highlight"><code class="CodeRay language-javascript">#{code}</code></pre>)
       end
 
-      def xml(xml_string)
-        doc = REXML::Document.new(xml_string)
-        doc.write(output="", 4)
-        code = encode_tags(output)
+      def xml(xml_string, format=false)
+        if format
+          doc = REXML::Document.new(xml_string)
+          doc.write(output="", 2)
+          code = encode_tags(output)
+        else
+          code = encode_tags(xml_string)
+        end
         %(<pre class="highlight"><code class="CodeRay language-xml">#{code}</code></pre>)
       end
 
