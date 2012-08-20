@@ -202,12 +202,15 @@ section#section {
       border-radius: 0;
       margin-bottom: 0;
       background-image: url("hbg.png");
+
+      + pre.highlight {
+        border-top: 0;
+      }
     }
 
     &.highlight {
       border-radius: 0;
       margin-top: 0;
-      border-top: 0;
     }
   }
 }
