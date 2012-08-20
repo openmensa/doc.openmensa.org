@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cafeteria version="1.0"
-  xmlns="http://openmensa.org/open-mensa-v1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://openmensa.org/open-mensa-v1 http://openmensa.org/open-mensa-v1.xsd">
+           xmlns="http://openmensa.org/open-mensa-v1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://openmensa.org/open-mensa-v1 http://openmensa.org/open-mensa-v1.xsd">
   <day date="2012-05-29">
     <category name="Essen 1">
       <meal>
@@ -26,5 +26,7 @@
         <price>2.50</price>
       </meal>
     </category>
+    <!-- more categories... -->
   </day>
+  <!-- more days... -->
 </cafeteria>
