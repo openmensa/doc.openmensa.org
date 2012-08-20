@@ -11,20 +11,26 @@
   <meta name="generator" content="nanoc 3.3.2">
 </head>
 <body>
-  <div id="header-wrapper">
-    <div id="header">
-      <div>
-        <%= render 'nav' %>
-      </div>
-    </div><!-- #header -->
-  </div><!-- #header-wrapper -->
-
+  <header id="header">
+    <h1><span>Doc</span>OpenMensa</h1>
+    <%= render 'nav' %>
+  </header>
   <div id="wrapper">
-    <div class="content">
+    <section id="section">
       <%= yield %>
-    </div>
-
-    <%= render sidebar_identifier %>
-  </div><!-- #wrapper -->
+    </section>
+    <aside>
+      <%= render sidebar_identifier %>
+    </aside>
+    <footer id="footer">
+      © 2012 OpenMensa
+      &nbsp;&middot;&nbsp;
+      <a href="http://openmensa.org/static/impressum">Impressum</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://blog.altimos.de/">Blog</a>
+      &nbsp;&middot;&nbsp;
+      <a href="http://openmensa.org/static/developer">Developer</a>
+    </footer>
+  </div>
 </body>
 </html>
