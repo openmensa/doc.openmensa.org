@@ -1,6 +1,6 @@
 module OpenMensa
   module Resources
-  	module V2
+  	module APIv2
       def self.headers(status, head = {})
         css_class = (status == 204 || status == 404) ? 'headers no-response' : 'headers'
         lines = ["Status: #{STATUSES[status]}"]

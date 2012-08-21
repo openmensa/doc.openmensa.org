@@ -22,23 +22,32 @@ module OpenMensa
         500 => '500 Server Error'
       }
 
-      # derives the API version of the document currently processed by nanoc
-      def api_version
-        return nil if item.identifier.split('/')[1] != 'api'
-        item.identifier.split('/')[2].to_s.upcase
-      end
-
       def current_type_version
         [item.identifier.split('/')[1].to_s.to_sym, item.identifier.split('/')[2].to_s.to_sym]
       end
 
+      def current_res_module
+        res_module_name(*current_type_version)
+      end
+
       def headers(*opts)
-        Resources.const_get(api_version).headers(*opts)
+        Resources.const_get(current_res_module).headers(*opts)
       end
 
       def sidebar_identifier(*opts)
-        return "sidebar_default" if api_version == nil
-        Resources.const_get(api_version).sidebar_identifier(*opts)
+        return "sidebar_empty" if current_res_module == nil
+        Resources.const_get(current_res_module).sidebar_identifier(*opts)
+      end
+
+      def res_module_name(type, version)
+        case type
+        when :api
+          "API#{version}"
+        when :feed
+          "Feed#{version}"
+        else
+          nil
+        end
       end
 
       def nav_item(type, version)
@@ -48,13 +57,10 @@ module OpenMensa
         when :feed
           "Feed #{version}"
         end
-        
         path = "/#{type}/#{version}/"
-
-        focus = [type, version] == current_type_version
-
+        classes = [type, version] == current_type_version ? 'current' : ''
         # build list item
-        %(<li><a href="#{path}" class="#{focus ? 'focus' : ''}">#{label}</a></li>)
+        %(<li><a href="#{path}" class="#{classes}">#{label}</a></li>)
       end
 
       def file_in(path)
@@ -70,7 +76,7 @@ module OpenMensa
           when Array
             key
           else
-            Resources.const_get(api_version).const_get(key.to_s.upcase)
+            Resources.const_get(current_res_module).const_get(key.to_s.upcase)
         end
         hash = yield hash if block_given?
         code = encode_tags(JSON.pretty_generate(hash))
