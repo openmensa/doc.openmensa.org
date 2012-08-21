@@ -132,8 +132,18 @@ header#header { @extend #wrapper;
     margin: 0;
     min-height: 26px;
 
+    a {
+      color: #333;
+
+      &:hover, &:active {
+        text-decoration: none;
+      }
+    }
+
     span {
-      color: #2941B4;
+      a {
+        color: #2941B4;
+      }
       &:after {
         content: " | ";
         color: #999;
