@@ -18,7 +18,7 @@ module OpenMensa
         "meal" => {
           "id" => 260,
           "name" => "Rührei mit Knackwurst",
-          "description" => "Paprika und Tomaten, Paprika und Tomaten,",
+          "description" => "Paprika und Tomaten",
           "date" => "2012-07-13T02:00:00+02:00"
         }
       }

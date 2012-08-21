@@ -32,10 +32,10 @@ module OpenMensa
 
       CANTEEN = {
         "id" => 1,
-        "name" => "Mensa Jena, Ernst-Abbe-Platz",
+        "name" => "Mensa Ernst-Abbe-Platz",
         "address" => "Ernst-Abbe-Platz 8, 07743 Jena, Germany",
-        "latitude" => 50.926740,
-        "longitude" => 11.581006
+        "latitude" => 50.9287296813292,
+        "longitude" =>  11.5825831890106
       }
 
       FAV = {
