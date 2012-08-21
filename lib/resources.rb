@@ -30,15 +30,20 @@ module OpenMensa
         res_module_name(*current_type_version)
       end
 
+      # returns a string for embedding right into markdown (may contain html)
+      # that contains some HTTP headers (**resource-dependent**)
       def headers(*opts)
         Resources.const_get(current_res_module).headers(*opts)
       end
 
+      # returns the identifier aka item name for a nanoc layout to be rendered
+      # as sidebar content that varies with current resource (**resource-dependent**)
       def sidebar_identifier(*opts)
-        return "sidebar_empty" if current_res_module == nil
+        return 'sidebar_empty' if current_res_module == nil
         Resources.const_get(current_res_module).sidebar_identifier(*opts)
       end
 
+      # returns the name of a ruby module X found as to OpenMesna::Resources::X
       def res_module_name(type, version)
         case type
         when :api
@@ -50,6 +55,8 @@ module OpenMensa
         end
       end
 
+      # creates and renderes a nav item (<li>) to the given resource (nanoc item
+      # made up by /type/version/)
       def nav_item(type, version)
         label = case type
         when :api
@@ -63,6 +70,7 @@ module OpenMensa
         %(<li><a href="#{path}" class="#{classes}">#{label}</a></li>)
       end
 
+      # return contents of the given file (path) as string
       def file_in(path)
         File.open(path, 'r') do |f| f.read end
       end
@@ -94,6 +102,7 @@ module OpenMensa
         %(<pre class="highlight"><code class="CodeRay language-xml">#{code}</code></pre>)
       end
 
+      # escapes *some* html entities
       def encode_tags(string)
         string.to_s.gsub(/>/, "&gt;").gsub(/</, "&lt;")
       end
