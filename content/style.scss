@@ -208,8 +208,8 @@ section#section {
     margin-bottom: 0;
     padding: 4px 6px;
     border: 1px solid #ccc;
-    background-color: #f4f4f4;
-    @include prefixer(box-shadow, 0 0 2px rgba(0, 0, 0, 0.15), webkit, not moz);
+    background-color: #f8f8f8;
+    //@include prefixer(box-shadow, 0 0 2px rgba(0, 0, 0, 0.15), webkit, not moz);
 
     code {
       border: none;

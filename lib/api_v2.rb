@@ -22,9 +22,9 @@ module OpenMensa
           "mensaVital"
         ],
         "prices" => {
-          "student" => "2.30",
-          "employee" => "3.65",
-          "other" => "4.60"
+          "student" => 2.30,
+          "employee" => 3.65,
+          "other" => 4.60
         },
         "date" => "2012-05-29T00:00:00Z",
         "category" => "Alternativ-Angebot"
@@ -34,8 +34,8 @@ module OpenMensa
         "id" => 1,
         "name" => "Mensa Jena, Ernst-Abbe-Platz",
         "address" => "Ernst-Abbe-Platz 8, 07743 Jena, Germany",
-        "latitude" => "50.926740",
-        "longitude" => "11.581006"
+        "latitude" => 50.926740,
+        "longitude" => 11.581006
       }
 
       FAV = {
