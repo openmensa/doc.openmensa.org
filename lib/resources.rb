@@ -28,6 +28,10 @@ module OpenMensa
         item.identifier.split('/')[2].to_s.upcase
       end
 
+      def current_type_version
+        [item.identifier.split('/')[1].to_s.to_sym, item.identifier.split('/')[2].to_s.to_sym]
+      end
+
       def headers(*opts)
         Resources.const_get(api_version).headers(*opts)
       end
@@ -35,6 +39,22 @@ module OpenMensa
       def sidebar_identifier(*opts)
         return "sidebar_default" if api_version == nil
         Resources.const_get(api_version).sidebar_identifier(*opts)
+      end
+
+      def nav_item(type, version)
+        label = case type
+        when :api
+          "API #{version}"
+        when :feed
+          "Feed #{version}"
+        end
+        
+        path = "/#{type}/#{version}/"
+
+        focus = [type, version] == current_type_version
+
+        # build list item
+        %(<li><a href="#{path}" class="#{focus ? 'focus' : ''}">#{label}</a></li>)
       end
 
       def file_in(path)

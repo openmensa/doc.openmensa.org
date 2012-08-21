@@ -156,6 +156,10 @@ header#header { @extend #wrapper;
         border-left: 1px solid #fff;
         border-right: 1px solid #ccc;
         text-shadow: 0 1px 2px #aaa;
+
+        &.focus {
+          font-weight: bold;
+        }
       }
 
       &:first-child a {
