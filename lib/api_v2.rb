@@ -30,19 +30,51 @@ module OpenMensa
         "category" => "Alternativ-Angebot"
       }
 
+      MEAL2 = {
+        "id" => 10900,
+        "name" => "Hähnchenschnitzel mit Brötchen",
+        "notes" => [],
+        "prices" => {
+          "pupil" => 2.40,
+          "other" => 4.30,
+        },
+        "date" => "2012-08-24T00:00:00Z",
+        "category" => "Cafeteria Heiße Theke"
+      }
+
+      MEALS = [MEAL, MEAL2]
+
       CANTEEN = {
         "id" => 1,
         "name" => "Mensa Ernst-Abbe-Platz",
         "address" => "Ernst-Abbe-Platz 8, 07743 Jena, Germany",
-        "latitude" => 50.9287296813292,
-        "longitude" =>  11.5825831890106
+        "longitude" =>  11.5825831890106,
+        "latitude" => 50.9287296813292
       }
+
+      CANTEEN2 = {
+        "id" => 104,
+        "name" => "Bistro Tasty Studio Babelsberg",
+        "address" => "August-Bebel-Str. 26-53, 14482 Potsdam, Deutschland",
+        "longitude" => 13.1209909915924,
+        "latitude" => 52.3877669669544
+      }
+
+      CANTEENS = [CANTEEN, CANTEEN2]
 
       FAV = {
         "id" => 55,
         "canteen_id" => 1,
         "sort_value" => 4
       }
+
+      FAV2 = {
+        "id" => 56,
+        "canteen_id" => 2,
+        "sort_value" => 6
+      }
+
+      FAVS = [FAV, FAV2]
     end
   end
 end

@@ -23,7 +23,7 @@ range
 ### Response
 
 <%= headers 200 %>
-<%= json(:meal) { |h| [h] } %>
+<%= json :meals %>
 
 ## Get a single meal
 
@@ -32,4 +32,4 @@ range
 ### Response
 
 <%= headers 200 %>
-<%= json(:meal) %>
+<%= json :meal %>

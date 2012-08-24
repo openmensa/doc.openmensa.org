@@ -22,7 +22,7 @@ search
 ### Response
 
 <%= headers 200 %>
-<%= json(:canteen) { |h| [h] } %>
+<%= json :canteens %>
 
 ## Get a single canteen
 
@@ -31,4 +31,4 @@ search
 ### Reponse
 
 <%= headers 200 %>
-<%= json(:canteen) %>
+<%= json :canteen %>

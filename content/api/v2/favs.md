@@ -19,7 +19,7 @@ The server will output them sorted ascendingly by `sort_value`.
 ### Response
 
 <%= headers 200 %>
-<%= json(:fav) { |h| [h] } %>
+<%= json :favs %>
 
 ## Get a single fav
 
