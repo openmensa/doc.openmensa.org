@@ -41,7 +41,7 @@ module OpenMensa
       FAV = {
         "id" => 55,
         "canteen_id" => 1,
-        "index" => 6
+        "sort_value" => 4
       }
     end
   end

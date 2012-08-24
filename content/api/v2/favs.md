@@ -14,7 +14,7 @@ List the current users favs:
 
 	GET /favs
 
-Note: the server tries to keep them sorted ascendingly but a client must not rely on this fact.
+The server will output them sorted ascendingly by `sort_value`.
 
 ### Response
 
@@ -37,10 +37,10 @@ Note: the server tries to keep them sorted ascendingly but a client must not rel
 ### Input
 
 canteen_id
-: _Required_ **integer** - The referenced canteen.
+: _Required_ **integer** - The referenced canteen, needs to be unique among a user's favorites list.
 
-index
-: _Required_ **integer** - An index by which the favorites are sorted ascendingly.
+sort_value
+: _Required_ non-negative **integer** - A value by which the favorites are sorted ascendingly; the sequence of sort_values may contain duplicates or gaps.
 
 <%= json \
   :canteen_id => 1,
@@ -52,6 +52,12 @@ index
 <%= headers 201 %>
 <%= json :fav %>
 
+### Errors
+
+On duplicate canteen_id:
+
+<%= headers 409 %>
+
 ## Edit
 
 	PATCH /favs/:id
@@ -59,10 +65,10 @@ index
 ### Input
 
 canteen_id
-: _Optional_ **integer** - The referenced canteen.
+: _Optional_ **integer** - The referenced canteen, needs to be unique among a user's favorites list.
 
 index
-: _Optional_ **integer** - An index by which the favorites are sorted ascendingly.
+: _Optional_ non-negative **integer** - A value by which the favorites are sorted ascendingly; the sequence of sort_values may contain duplicates or gaps.
 
 <%= json \
   :index => 6
@@ -72,6 +78,12 @@ index
 
 <%= headers 200 %>
 <%= json :fav %>
+
+### Errors
+
+On duplicate canteen_id:
+
+<%= headers 409 %>
 
 ## Delete
 
