@@ -12,4 +12,4 @@ On this page are all OpenMensa APIs and Feed versions documented even the histor
 
 ## Current Feed Version
 
-**[Feed v1](/feed/v1/)** is currently stable but is going to be replaced soon by [Feed v2](/feed/v2/)!
+**[Feed v2](/feed/v2/)** is currently stable but backward-compatible updates may occur.
