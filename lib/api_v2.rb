@@ -26,7 +26,6 @@ module OpenMensa
           "employee" => 3.65,
           "other" => 4.60
         },
-        "date" => "2012-05-29T00:00:00Z",
         "category" => "Alternativ-Angebot"
       }
 
@@ -38,11 +37,25 @@ module OpenMensa
           "pupil" => 2.40,
           "other" => 4.30,
         },
-        "date" => "2012-08-24T00:00:00Z",
         "category" => "Cafeteria Heiße Theke"
       }
 
       MEALS = [MEAL, MEAL2]
+
+      DAY = {
+        "id" => 23,
+        "date" => "2012-05-29T00:00:00Z",
+        "closed" => false,
+        "meal_ids" => [260, 10900]
+      }
+
+      DAY2 = {
+        "id" => 24,
+        "date" => "2012-05-30T00:00:00Z",
+        "closed" => true
+      }
+
+      DAYS = [DAY, DAY2]
 
       CANTEEN = {
         "id" => 1,
