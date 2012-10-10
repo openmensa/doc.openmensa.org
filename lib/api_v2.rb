@@ -59,18 +59,22 @@ module OpenMensa
 
       CANTEEN = {
         "id" => 1,
-        "name" => "Mensa Ernst-Abbe-Platz",
-        "address" => "Ernst-Abbe-Platz 8, 07743 Jena, Germany",
-        "longitude" =>  11.5825831890106,
-        "latitude" => 50.9287296813292
+        "name" => "Mensa UniCampus Magdeburg",
+        "address" => "Pfälzer Str. 1, 39106 Magdeburg",
+        "coordinates" => [
+          52.1396188273019,
+          11.6475999355316
+        ]
       }
 
       CANTEEN2 = {
         "id" => 104,
         "name" => "Bistro Tasty Studio Babelsberg",
         "address" => "August-Bebel-Str. 26-53, 14482 Potsdam, Deutschland",
-        "longitude" => 13.1209909915924,
-        "latitude" => 52.3877669669544
+        "coordinates" => [
+          13.1209909915924,
+          52.3877669669544
+        ]
       }
 
       CANTEENS = [CANTEEN, CANTEEN2]
