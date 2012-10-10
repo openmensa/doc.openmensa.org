@@ -14,6 +14,11 @@ module OpenMensa
         'sidebar_v2'
       end
 
+      COORDINATES = [
+        52.1396188273019,
+        11.6475999355316
+      ]
+
       MEAL = {
         "id" => 260,
         "name" => "Gemüse-Couscouspfanne mit Joghurt-Ingwer-Dip, dazu bunter Blattsalat",
