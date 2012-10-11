@@ -77,8 +77,8 @@ module OpenMensa
         "name" => "Bistro Tasty Studio Babelsberg",
         "address" => "August-Bebel-Str. 26-53, 14482 Potsdam, Deutschland",
         "coordinates" => [
-          13.1209909915924,
-          52.3877669669544
+          52.3877669669544,
+          13.1209909915924
         ]
       }
 
