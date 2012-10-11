@@ -40,7 +40,7 @@ body {
   font-size: 13px;
   font-size: 1.3rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.35;
+  line-height: 1.5;
 
   background-color: #ededed;
   background-image: url("fbg.png");
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5 {
   font-size: 24px;
   font-size: 2.4rem;
   font-weight: normal;
-  margin: 1.1em 0 .5em;
+  margin: 1.2em 0 .5em;
 }
 h1 { margin-top: 8px; }
 h2 {
@@ -77,7 +77,7 @@ small {
 }
 b, strong { font-weight: bold; }
 i, em { font-style: italic; }
-p { margin: 6px 0; }
+p { margin: 0 0 15px 0; text-align: justify; }
 
 ul, ol { @extend p;
   padding-left: 2.5em;
