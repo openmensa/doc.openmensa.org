@@ -45,9 +45,11 @@ body {
   background-color: #ededed;
   background-image: url("fbg.png");
 }
+$header-font: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 h1, h2, h3, h4, h5 {
   color: #333;
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $header-font;
   font-size: 24px;
   font-size: 2.4rem;
   font-weight: normal;
@@ -84,7 +86,11 @@ ul { list-style: circle; }
 ol { list-style: decimal; }
 hr { border: none; border-top: 1px solid #ccc; }
 dl { @extend p;
-  padding-left: 1em; }
+  padding-left: 1em;
+
+  dt { font-family: $header-font; }
+  dd { margin: 1px 0 10px 20px; }
+}
 code, pre {
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace; }
 code {
