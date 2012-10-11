@@ -90,7 +90,7 @@ code, pre {
 code {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
-  padding: 2px 4px;
+  padding: 0 2px;
 }
 pre { @extend p;
   overflow: auto;
@@ -245,38 +245,32 @@ aside {
   background: #fff;
   @include prefixer(box-shadow, 0 1px 3px rgba(0, 0, 0, 0.4), webkit, not moz);
 
+  h2 {
+    margin: 0;
+    padding: 10px 15px 9px 15px;
+    background-image: url("hbg.png");
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    @include clearfix;
+    @include prefixer(box-shadow, 0 2px 2px rgba(0, 0, 0, 0.05), webkit, not moz);
+  }
+
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
 
     li {
+
       h3 {
-        background-image: url("hbg.png");
         margin: 0;
-
-        border-top: 1px solid #ddd;
-
-        @include prefixer(box-shadow, 0 2px 2px rgba(0, 0, 0, 0.05), webkit, not moz);
-
-        a {
-          color: #333;
-          display: block;
-          padding: 10px 14px;
-
-          &:hover {
-            text-decoration: none;
-          }
-        }
       }
-    }
 
-    ul {
-      li:last-child { }
-
-      li a {
+      a {
+        font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         display: block;
-        padding: 10px 15px 10px 25px;
+        padding: 10px 15px 10px 15px;
         color: #333;
         font-weight: bold;
         border-top: 1px solid #ddd;
@@ -288,6 +282,9 @@ aside {
           @include prefixer(transition, background-color .2s ease-in-out, webkit, moz);
         }
       }
+
+      li a { padding-left: 35px; }
+      li li a { padding-left: 55px; }
     }
   }
 }
