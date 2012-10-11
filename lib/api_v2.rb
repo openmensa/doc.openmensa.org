@@ -66,10 +66,7 @@ module OpenMensa
         "id" => 1,
         "name" => "Mensa UniCampus Magdeburg",
         "address" => "Pfälzer Str. 1, 39106 Magdeburg",
-        "coordinates" => [
-          52.1396188273019,
-          11.6475999355316
-        ]
+        "coordinates" => COORDINATES
       }
 
       CANTEEN2 = {
