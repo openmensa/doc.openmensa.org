@@ -97,9 +97,11 @@ code {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
   padding: 0 2px;
+  border-radius: 2px;
 }
 pre { @extend p;
   overflow: auto;
+  border-radius: 2px;
   code { display: block; padding: 3px 5px 2px; }
 }
 address { @extend p; }
@@ -223,17 +225,20 @@ section#section {
     }
 
     &.headers {
-      border-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       margin-bottom: 0;
       background-image: url("hbg.png");
 
       + pre.highlight {
         border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
       }
     }
 
     &.highlight {
-      border-radius: 0;
+      border-radius: 2px;
       margin-top: 0;
     }
   }
@@ -310,3 +315,45 @@ footer#footer {
     }
   }
 }
+
+// Alerts
+
+$alert: #333 !default;
+$alert-bg: lighten(#ccc, 19%) !default;
+$alert-border: darken(#ccc, 10%) !default;
+$alert-error: #B94A48 !default;
+$alert-error-bg: #F2DEDE !default;
+$alert-error-border: darken($alert-error-bg, 20%) !default;
+$alert-warning: #C09853 !default;
+$alert-warning-bg: #FCF8E3 !default;
+$alert-warning-border: darken($alert-warning-bg, 30%) !default;
+$alert-notice: darken(#465088, 15%) !default;
+$alert-notice-bg: #D8D9F0 !default;
+$alert-notice-border: darken($alert-notice-bg, 30%) !default;
+
+
+@mixin alert($color, $bg, $border) {
+  @extend p;
+  // @include prefixer(box-shadow, 0 0 2px rgba(0, 0, 0, 0.2), webkit, not moz);
+  color: darken($color, 30%);
+  padding: 8px 32px 8px 33px;
+  background-color: $bg;
+  background-position: 9px 9px;
+  background-repeat: no-repeat;
+  border: 1px solid $border;
+  // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+}
+
+.alert {
+  background-image: url(comment.png);
+  @include alert($alert, $alert-bg, $alert-border); }
+.alert-error {
+  background-image: url(exclamation.png);
+  @include alert($alert-error, $alert-error-bg, $alert-error-border); }
+.alert-notice {
+  background-image: url(information.png);
+  @include alert($alert-notice, $alert-notice-bg, $alert-notice-border); }
+.alert-warning {
+  background-image: url(error.png);
+  @include alert($alert-warning, $alert-warning-bg, $alert-warning-border); }

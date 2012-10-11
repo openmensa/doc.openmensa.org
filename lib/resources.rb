@@ -103,6 +103,10 @@ module OpenMensa
         %(<pre class="highlight"><code class="CodeRay language-xml">#{code}</code></pre>)
       end
 
+      def alert(text, type = nil)
+        %(<p class="alert#{type ? "-#{type}" : ""}">#{text}</p>)
+      end
+
       # escapes *some* html entities
       def encode_tags(string)
         string.to_s.gsub(/>/, "&gt;").gsub(/</, "&lt;")
