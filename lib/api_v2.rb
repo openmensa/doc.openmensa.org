@@ -48,15 +48,12 @@ module OpenMensa
       MEALS = [MEAL, MEAL2]
 
       DAY = {
-        "id" => 23,
-        "date" => "2012-05-29T00:00:00Z",
-        "closed" => false,
-        "meal_ids" => [260, 10900]
+        "date" => "2012-10-12",
+        "closed" => false
       }
 
       DAY2 = {
-        "id" => 24,
-        "date" => "2012-05-30T00:00:00Z",
+        "date" => "2012-10-15",
         "closed" => true
       }
 
