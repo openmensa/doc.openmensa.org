@@ -5,13 +5,23 @@ module OpenMensa
         css_class = (status == 204 || status == 404) ? 'headers no-response' : 'headers'
         lines = ["Status: #{STATUSES[status]}"]
         head.each do |key, value|
-          lines << "#{key}: #{value}"
+          case key
+            when :pagination
+              lines << 'Link: <http://openmensa.org/api/v2/resource?page=2>; rel="next",'
+              lines << '      <http://openmensa.org/api/v2/resource?page=5>; rel="last"'
+              lines << 'X-Total-Pages: 5'
+            else lines << "#{key}: #{value}"
+          end
         end
         %(<pre class="#{css_class}"><code>#{lines * "\n"}</code></pre>\n)
       end
 
       def self.sidebar_identifier
         'sidebar_v2'
+      end
+
+      def self.curl(path, opts = {})
+        %(<pre class="terminal"><code>$ curl -i http://openmensa.org/api/v2/#{path}</code></pre>)
       end
 
       COORDINATES = [

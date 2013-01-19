@@ -4,9 +4,9 @@ title: Canteens | OpenMensa API
 
 # Canteens API
 
-## Authentication
-
-You can read all data anonymously.
+The **Canteens API** allows to query for all canteens or
+a geographical filtered subset. Canteens are supposed to
+not change very often and should be cached locally.
 
 ## List canteens
 
@@ -27,8 +27,15 @@ ids
 
 ### Response
 
-<%= headers 200 %>
+<%= curl "canteens" %>
+<%= headers 200, :pagination => true %>
 <%= json :canteens %>
+
+### Examples
+
+Return all canteens within a 5km radius around the Uni Potsdam canteen in Griebnitzsee.
+
+<%= curl "canteens?near[lat]=52.393535&near[lng]=13.127814&near[dist]=5" %>
 
 ## Get a single canteen
 
@@ -36,5 +43,6 @@ ids
 
 ### Reponse
 
+<%= curl "canteens/1" %>
 <%= headers 200 %>
 <%= json :canteen %>
