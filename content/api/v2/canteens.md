@@ -28,7 +28,7 @@ ids
 ### Response
 
 <%= curl "canteens" %>
-<%= headers 200, :pagination => true %>
+<%= headers 200, :pagination => "canteens" %>
 <%= json :canteens %>
 
 ### Examples

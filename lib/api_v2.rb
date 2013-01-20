@@ -7,9 +7,9 @@ module OpenMensa
         head.each do |key, value|
           case key
             when :pagination
-              lines << 'Link: <http://openmensa.org/api/v2/resource?page=2>; rel="next",'
-              lines << '      <http://openmensa.org/api/v2/resource?page=5>; rel="last"'
-              lines << 'X-Total-Pages: 5'
+              lines << "Link: <http://openmensa.org/api/v2/#{value}?page=2>; rel=\"next\","
+              lines << "      <http://openmensa.org/api/v2/#{value}?page=5>; rel=\"last\""
+              lines << "X-Total-Pages: 5"
             else lines << "#{key}: #{value}"
           end
         end
