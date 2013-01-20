@@ -37,6 +37,10 @@ module OpenMensa
         Resources.const_get(current_res_module).headers(*opts)
       end
 
+      def curl(*opts)
+        Resources.const_get(current_res_module).curl(*opts)
+      end
+
       # returns the identifier aka item name for a nanoc layout to be rendered
       # as sidebar content that varies with current resource (**resource-dependent**)
       def sidebar_identifier(*opts)
