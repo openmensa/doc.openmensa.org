@@ -4,6 +4,8 @@ title: Cafeterias | OpenMensa API
 
 # Cafeterias API
 
+<%= alert("This API is dropped and only documented for historic reasons!", :warning) %>
+
 ## Authentication
 
 You can read all data anonymously.

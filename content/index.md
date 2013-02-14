@@ -8,7 +8,7 @@ On this page are all OpenMensa APIs and Feed versions documented even the histor
 
 ## Current API Version
 
-**[API v1](/api/v1/)** is currently stable but is going to be replaced soon by [API v2](/api/v2/)!
+**[API v2](/api/v2/)** is currently stable but lacks some of the announced features so backward-compatible updates may occur.
 
 ## Current Feed Version
 
