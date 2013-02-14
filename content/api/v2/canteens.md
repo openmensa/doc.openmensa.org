@@ -4,9 +4,7 @@ title: Canteens | OpenMensa API
 
 # Canteens API
 
-The **Canteens API** allows to query for all canteens or
-a geographical filtered subset. Canteens are supposed to
-not change very often and should be cached locally.
+The **Canteens API** allows to query for all canteens or a geographical filtered subset. Canteens are supposed to not change very often and should be cached locally.
 
 ## List canteens
 

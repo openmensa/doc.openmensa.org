@@ -4,6 +4,8 @@ title: Favs | OpenMensa API
 
 # Favs API
 
+<%= alert("Not yet implemented!", :warning) %>
+
 ## Authentication
 
 You need to be authorized by OAuth to read and write a user's favorites.
