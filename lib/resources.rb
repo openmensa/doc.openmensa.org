@@ -62,14 +62,16 @@ module OpenMensa
 
       # creates and renderes a nav item (<li>) to the given resource (nanoc item
       # made up by /type/version/)
-      def nav_item(type, version)
+      def nav_item(type, version=nil)
         label = case type
         when :api
           "API #{version}"
         when :feed
           "Feed #{version}"
+        else
+          "#{type.capitalize}" + (version.nil? ? '' : " #{version.capitalize}")
         end
-        path = "/#{type}/#{version}/"
+        path = "/#{type}/" + (version.nil? ? '' : "#{version}/")
         classes = [type, version] == current_type_version ? 'current' : ''
         # build list item
         %(<li><a href="#{path}" class="#{classes}">#{label}</a></li>)
