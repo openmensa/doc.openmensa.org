@@ -77,6 +77,6 @@ watcher:
   notify_on_compilation_failure: true
 
 deploy:
-  public:
+  default:
     kind: rsync
     dst: openmensa@openmensa.org:/var/www/doc.openmensa.org

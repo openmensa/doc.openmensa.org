@@ -11,5 +11,5 @@ end
 
 desc "Compile and deploy site."
 task :deploy => [ :compile ] do
-  system 'nanoc deploy --target public'
+  system 'nanoc deploy'
 end
