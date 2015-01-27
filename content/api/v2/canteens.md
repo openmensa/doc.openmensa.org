@@ -14,10 +14,10 @@ List all canteens:
 
 ### Parameters
 
-near[lat], near[lng]
+near\[lat\], near\[lng\]
 : _Optional_ **float** - Searches for canteens near given coordinates. Both coordinates must be given.
 
-near[dist]
+near\[dist\]
 : _Optional_ **float** - Maximum distance to search for canteens near given coordinates. Requires given latitude and longitude. Default distance is 10 km.
 
 ids

@@ -25,7 +25,7 @@ For now I assume that a website should be used as data source. It is the common 
 
 ## Decide How To Parse The Data
 
-We need to transfer the meal information into the [standardized OpenMensa feed format][/feed/v2]. To be able to do that we need to parse the original ones. This depends on the kind of data source you have. It is every easy for an existing API (JSON parser or something) and difficult for PDF documents.
+We need to transfer the meal information into the [standardized OpenMensa feed format](/feed/v2). To be able to do that we need to parse the original ones. This depends on the kind of data source you have. It is every easy for an existing API (JSON parser or something) and difficult for PDF documents.
 
 Depending on your data you should look for libraries that support the parsing and choose your programming language afterwards.
 
