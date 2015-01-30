@@ -39,7 +39,7 @@ address
 : **string** - A human readable real-world locator (vulgo _street address_).
 
 coordinates
-: **list of floats** (or **null**) - The coordinates of the canteen, gievn as list of latitude and longitude in north-eastern direction (negative values imply southern or western hemisphere). Can be null if coordinates are unknown.
+: **list of floats** (or **null**) - The coordinates of the canteen, given as list of latitude and longitude in north-eastern direction (negative values imply southern or western hemisphere). Can be null if coordinates are unknown.
 
 ### Examples
 
