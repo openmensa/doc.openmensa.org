@@ -90,6 +90,7 @@ ul { list-style: circle; }
 ol { list-style: decimal; }
 hr { border: none; border-top: 1px solid #ccc; }
 dl { @extend p;
+  margin-top: .3em;
   padding-left: 1em;
 
   dt { font-family: $header-font; }
