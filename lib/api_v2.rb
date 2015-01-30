@@ -1,4 +1,4 @@
-﻿module OpenMensa
+module OpenMensa
   module Resources
   	module APIv2
       def self.headers(status, head = {})
@@ -23,6 +23,11 @@
       def self.curl(path, opts = {})
         %(<pre class="terminal"><code>$ curl -i http://openmensa.org/api/v2/#{path}</code></pre>)
       end
+
+      COORDINATES2 = [
+        52.3877669669544,
+        13.1209909915924
+      ]
 
       MEAL = {
         "id" => 260,
@@ -75,10 +80,7 @@
         "id" => 104,
         "name" => "Bistro Tasty Studio Babelsberg",
         "address" => "August-Bebel-Str. 26-53, 14482 Potsdam, Deutschland",
-        "coordinates" => [
-          52.3877669669544,
-          13.1209909915924
-        ]
+        "coordinates" => COORDINATES2
       }
 
       CANTEENS = [CANTEEN, CANTEEN2]
