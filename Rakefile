@@ -1,7 +1,7 @@
 
 desc "Compile site HTML using nanoc."
 task :compile do
-  system 'nanoc co'
+  system 'nanoc compile'
 end
 
 desc "Start the nanoc autocompiler."
@@ -12,4 +12,8 @@ end
 desc "Compile and deploy site."
 task :deploy => [ :compile ] do
   system 'nanoc deploy'
+end
+
+task :test do
+  system 'nanoc compile'
 end
