@@ -1,4 +1,4 @@
-module OpenMensa
+﻿module OpenMensa
   module Resources
   	module APIv2
       def self.headers(status, head = {})
@@ -23,11 +23,6 @@ module OpenMensa
       def self.curl(path, opts = {})
         %(<pre class="terminal"><code>$ curl -i http://openmensa.org/api/v2/#{path}</code></pre>)
       end
-
-      COORDINATES = [
-        52.1396188273019,
-        11.6475999355316
-      ]
 
       MEAL = {
         "id" => 260,
@@ -73,7 +68,7 @@ module OpenMensa
         "id" => 1,
         "name" => "Mensa UniCampus Magdeburg",
         "address" => "Pfälzer Str. 1, 39106 Magdeburg",
-        "coordinates" => COORDINATES
+        "coordinates" => nil
       }
 
       CANTEEN2 = {
