@@ -29,6 +29,18 @@ ids
 <%= headers 200, :pagination => "canteens" %>
 <%= json :canteens %>
 
+id
+: **int** - The canteen's numeric ID, which identifys it uniquely within the API.
+
+name
+: **string** - The canteen's name.
+
+address
+: **string** - A human readable real-world locator (vulgo _street address_).
+
+coordinates
+: **list of floats** (or **null**) - The coordinates of the canteen, given as list of latitude and longitude in north-eastern direction (negative values imply southern or western hemisphere). Can be null if coordinates are unknown.
+
 ### Examples
 
 Return all canteens within a 5km radius around the Uni Potsdam canteen in Griebnitzsee.
