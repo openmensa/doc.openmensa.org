@@ -23,6 +23,10 @@ near\[dist\]
 ids
 : _Optional_ **string** - A comma separated list of canteen IDs that should be returned.
 
+hasCoordinates
+: _Optional_ `true` or `false` - Should only canteens with (`true`) or without (`false`) coordinates be returned.
+
+
 ### Response
 
 <%= curl "canteens" %>
