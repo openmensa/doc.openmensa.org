@@ -11,6 +11,15 @@
     <phone>(0331) 977 3749/3748</phone>
     <location latitude="52.3935353446923" longitude="13.1278145313263" />
     <public />
+    <times type="opening">
+      <open weekday="monday">11:00-14:00</open>
+      <open weekday="tuesday">11:00-14:00</open>
+      <open weekday="wednesday">11:00-14:00</open>
+      <open weekday="thursday">11:00-14:00</open>
+      <open weekday="friday">11:00-14:00</open>
+      <open weekday="saturday">11:00-13:30</open>
+      <closed weekday="sunday" />
+    </times>
     <feed name="today" priority="0">
       <!-- cron like schedule information -->
       <schedule dayOfMonth="*" dayOfWeek="*" hour="8-14" retry="30 1" />
