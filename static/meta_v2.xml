@@ -12,12 +12,12 @@
     <location latitude="52.3935353446923" longitude="13.1278145313263" />
     <availability>public</availability>
     <times type="opening">
-      <open weekday="monday">11:00-14:00</open>
-      <open weekday="tuesday">11:00-14:00</open>
-      <open weekday="wednesday">11:00-14:00</open>
-      <open weekday="thursday">11:00-14:00</open>
-      <open weekday="friday">11:00-14:00</open>
-      <open weekday="saturday">11:00-13:30</open>
+      <open weekday="monday" time="11:00-14:00" />
+      <open weekday="tuesday" time="11:00-14:00" />
+      <open weekday="wednesday" time="11:00-14:00" />
+      <open weekday="thursday" time="11:00-14:00" />
+      <open weekday="friday" time="11:00-14:00" />
+      <open weekday="saturday" time="11:00-13:30" />
       <closed weekday="sunday" />
     </times>
     <feed name="today" priority="0">
