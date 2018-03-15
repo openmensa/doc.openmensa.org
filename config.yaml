@@ -19,6 +19,9 @@ index_filenames: [ 'index.html' ]
 # before and after the last site compilation.
 enable_output_diff: false
 
+# After upgrade to nanoc4 as per https://nanoc.ws/doc/nanoc-4-upgrade-guide/
+string_pattern_type: legacy
+
 prune:
   # Whether to automatically remove files not managed by nanoc from the output  
   # directory. For safety reasons, this is turned off by default.
@@ -57,6 +60,9 @@ data_sources:
     # will have the identifier “/about/” when turned off, but when turned on
     # it will become “/about.html/” instead.
     allow_periods_in_identifiers: false
+
+    # After upgrade to nanoc4 as per https://nanoc.ws/doc/nanoc-4-upgrade-guide/
+    identifier_type: legacy
 
 # Configuration for the “watch” command, which watches a site for changes and
 # recompiles if necessary.

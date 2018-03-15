@@ -24,7 +24,7 @@ module OpenMensa
       }
 
       def current_type_version
-        [item.identifier.split('/')[1].to_s.to_sym, item.identifier.split('/')[2].to_s.to_sym]
+        [item.identifier.to_s.split('/')[1].to_s.to_sym, item.identifier.to_s.split('/')[2].to_s.to_sym]
       end
 
       def current_res_module
