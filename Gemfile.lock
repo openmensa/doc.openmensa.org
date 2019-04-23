@@ -15,7 +15,7 @@ GEM
       ref (~> 2.0)
     ddmetrics (1.0.0)
     ddplugin (1.0.1)
-    ffi (1.9.23)
+    ffi (1.9.25)
     fssm (0.2.10)
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
