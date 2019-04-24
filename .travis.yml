@@ -5,4 +5,6 @@ rvm:
   - 2.5
   - 2.4
   - 2.3
+before_install:
+  - gem install bundler --version '1.17.3'
 script: "rake test"
