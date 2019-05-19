@@ -7,8 +7,8 @@ module OpenMensa
         head.each do |key, value|
           case key
             when :pagination
-              lines << "Link: <http://openmensa.org/api/v2/#{value}?page=2>; rel=\"next\","
-              lines << "      <http://openmensa.org/api/v2/#{value}?page=5>; rel=\"last\""
+              lines << "Link: <https://openmensa.org/api/v2/#{value}?page=2>; rel=\"next\","
+              lines << "      <https://openmensa.org/api/v2/#{value}?page=5>; rel=\"last\""
               lines << "X-Total-Pages: 5"
             else lines << "#{key}: #{value}"
           end
@@ -21,7 +21,7 @@ module OpenMensa
       end
 
       def self.curl(path, opts = {})
-        %(<pre class="terminal"><code>$ curl -i http://openmensa.org/api/v2/#{path}</code></pre>)
+        %(<pre class="terminal"><code>$ curl -i https://openmensa.org/api/v2/#{path}</code></pre>)
       end
 
       COORDINATES2 = [
