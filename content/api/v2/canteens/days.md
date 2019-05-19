@@ -4,10 +4,6 @@ title: Days | OpenMensa API
 
 # Days API
 
-## Authentication
-
-You can read all data anonymously.
-
 ## List days of a canteen
 
 	GET /canteens/:id/days
