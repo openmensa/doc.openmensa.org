@@ -72,6 +72,7 @@ module OpenMensa
       CANTEEN = {
         "id" => 1,
         "name" => "Mensa UniCampus Magdeburg",
+        "city" => "Magdeburg",
         "address" => "Pfälzer Str. 1, 39106 Magdeburg",
         "coordinates" => nil
       }
@@ -79,6 +80,7 @@ module OpenMensa
       CANTEEN2 = {
         "id" => 104,
         "name" => "Bistro Tasty Studio Babelsberg",
+        "city" => "Potsdam",
         "address" => "August-Bebel-Str. 26-53, 14482 Potsdam, Deutschland",
         "coordinates" => COORDINATES2
       }
