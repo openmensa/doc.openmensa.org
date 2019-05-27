@@ -37,9 +37,9 @@ module OpenMensa
           "mensaVital"
         ],
         "prices" => {
-          "student" => 2.30,
-          "employee" => 3.65,
-          "other" => 4.60
+          "students" => 2.30,
+          "employees" => 3.65,
+          "others" => 4.60
         },
         "category" => "Alternativ-Angebot"
       }
@@ -49,8 +49,8 @@ module OpenMensa
         "name" => "Hähnchenschnitzel mit Brötchen",
         "notes" => [],
         "prices" => {
-          "pupil" => 2.40,
-          "other" => 4.30,
+          "pupils" => 2.40,
+          "others" => 4.30,
         },
         "category" => "Cafeteria Heiße Theke"
       }
