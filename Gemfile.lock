@@ -23,7 +23,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     nanoc (4.9.1)
       addressable (~> 2.5)
       cri (~> 2.8)
@@ -34,8 +34,8 @@ GEM
       parallel (~> 1.12)
       ref (~> 2.0)
       slow_enumerator_tools (~> 1.0)
-    nokogiri (1.8.5)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.4)
+      mini_portile2 (~> 2.4.0)
     parallel (1.12.1)
     public_suffix (3.0.2)
     rack (2.0.7)
@@ -62,7 +62,7 @@ DEPENDENCIES
   kramdown
   mime-types
   nanoc (~> 4.0)
-  nokogiri (~> 1.8.0)
+  nokogiri (~> 1.10.4)
   rake
   sass
   systemu
