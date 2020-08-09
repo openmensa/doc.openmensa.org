@@ -19,7 +19,8 @@ GEM
     fssm (0.2.10)
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    kramdown (1.16.2)
+    kramdown (2.3.0)
+      rexml
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -44,6 +45,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     ref (2.0.0)
+    rexml (3.2.4)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
