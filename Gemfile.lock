@@ -1,8 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     adsf (1.4.1)
       rack (>= 1.0.0, < 3.0.0)
     coderay (1.1.2)
@@ -39,7 +39,7 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     parallel (1.12.1)
-    public_suffix (3.0.2)
+    public_suffix (4.0.6)
     racc (1.5.2)
     rack (2.2.3)
     rake (12.3.3)
