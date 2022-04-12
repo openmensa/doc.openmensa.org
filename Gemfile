@@ -10,6 +10,6 @@ gem 'rake'
 gem 'kramdown'
 gem 'sass'
 
-gem 'nokogiri', '~> 1.13.2'
+gem 'nokogiri', '~> 1.13.4'
 gem 'mime-types'
 gem 'coderay'
